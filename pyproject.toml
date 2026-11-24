@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gsd-path-workspaces"
+version = "0.1.0"
+description = "Parallel GSD Path roadmaps over shared member repositories, one disposable workspace each"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Michel Moreira" }]
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["gsd-path", "git", "workspaces", "ai-agents", "claude-code"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Version Control :: Git",
+]
+
+[project.urls]
+Homepage = "https://github.com/drungrin/gsd-path-workspaces"
+Issues = "https://github.com/drungrin/gsd-path-workspaces/issues"
+"GSD Path" = "https://github.com/drungrin/gsd-path"
+
+[project.scripts]
+gsd-path-workspaces = "gsd_path_workspaces.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
